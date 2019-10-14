@@ -1,0 +1,35 @@
+body{
+    font-size: 16px; /*1em*/
+    margin: 0px auto; /*centrado pantalla*/ 
+    max-width: 1078px; /*cliente*/
+    min-width: 1078px;
+}
+
+body header{
+
+}
+
+body header nav{
+    /*Centrar texto interno*/
+    text-align: left;
+    margin-left: 10px;
+    /*"Centrar" falsamente la barra de navegacion*/
+}
+
+header nav ul li{
+    display: inline-block;
+    font-size: 1.5em;
+    padding-left: 15px;
+}
+
+.nobullet{
+    list-style-type: none; 
+}
+
+.colorverde{
+    
+}
+
+.nito{
+    font-weight: bold;
+}
