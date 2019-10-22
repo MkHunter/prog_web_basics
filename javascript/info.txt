@@ -1,0 +1,7 @@
+JavaScript:
+    *Lenguaje de programacion para el Web.
+    *Comparte sintaxis con Java.
+    *Lenguaje no tipado(no necesita declaracion de variables)
+    *El uso de punto y coma es opcional.
+    *Se usa generalmente para el comportamiento e interaccion con el usuario.
+    *Se puede usar tanto en el cliente como en el servidor.
