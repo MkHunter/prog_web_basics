@@ -4,6 +4,52 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <script>
+        var operador=""; //Variable global
+
+        function numeros(num){
+            var dato1 = document.getElementById('operando1').value;
+            var dato2 = document.getElementById('operando2').value;
+            if(operador == ""){
+                if(dato1 == "0"){
+                    document.getElementById('operando1').value = "";
+                }
+                document.getElementById('operando1').value+=num;
+            }else{
+                if(dato2 == "0"){
+                    document.getElementById('operando2').value = "";
+                }
+                document.getElementById('operando2').value+=num;
+            }
+        }
+
+        function operadores(ope){
+            operador = ope;
+        }
+
+        function resultado() {
+            var dato1 = document.getElementById('operando1').value;
+            var dato2 = document.getElementById('operando2').value;      
+            alert(dato1 + operador + dato2);
+            if(operador == '/'){
+                if (dato2 == 0) {
+                    alert("No se debe dividir entre cero");
+                }
+            }
+            
+            alert(dato1 + operador + dato2);
+            document.getElementById('operando1').value = eval(dato1 + operador + dato2);
+            document.getElementById('operando2').value = "0";
+            operador = "";
+        }
+
+        function ce() {
+            document.getElementById('operando1').value = "0";
+            document.getElementById('operando2').value = "0";
+            operador = "";
+        }
+
+    </script>
 </head>
 <body>
     <article>
@@ -11,42 +57,43 @@
     </article>
     <!-- table>tbody>tr*4>td*4>button# -->
     <table>
+        <!--  thead>tr*2>td>input#operando -->
         <thead>
             <tr>
                 <td colspan="2">
-                    <input type="text" id="entrada">
+                    <input type="text" value="0" id="operando1" disabled>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="text" id="salida">
+                    <input type="text" value="0" id="operando2" disabled>
                 </td>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><button id="">7</button></td>
-                <td><button id="">8</button></td>
-                <td><button id="">9</button></td>
-                <td><button id="">+</button></td>
+                <td><button id="" onClick="numeros(7)">7</button></td>
+                <td><button id="" onClick="numeros(8)">8</button></td>
+                <td><button id="" onClick="numeros(9)">9</button></td>
+                <td><button id="" onClick="operadores('+')">+</button></td>
             </tr>
             <tr>
-                <td><button id="">4</button></td>
-                <td><button id="">5</button></td>
-                <td><button id="">6</button></td>
-                <td><button id="">-</button></td>
+                <td><button id="" onClick="numeros(4)">4</button></td>
+                <td><button id="" onClick="numeros(5)">5</button></td>
+                <td><button id="" onClick="numeros(6)">6</button></td>
+                <td><button id="" onClick="operadores('-')">-</button></td>
             </tr>
             <tr>
-                <td><button id="">1</button></td>
-                <td><button id="">2</button></td>
-                <td><button id="">3</button></td>
-                <td><button id="">*</button></td>
+                <td><button id="" onClick="numeros(1)">1</button></td>
+                <td><button id="" onClick="numeros(2)">2</button></td>
+                <td><button id="" onClick="numeros(3)">3</button></td>
+                <td><button id="" onClick="operadores('*')">*</button></td>
             </tr>
             <tr>
-                <td><button id="">=</button></td>
-                <td><button id="">0</button></td>
-                <td><button id="">CE</button></td>
-                <td><button id="">/</button></td>
+                <td><button id="resultado()">=</button></td>
+                <td><button id="numeros(0)">0</button></td>
+                <td><button id="ce()">CE</button></td>
+                <td><button id="operadores('/')">/</button></td>
             </tr>
         </tbody>
     </table>
