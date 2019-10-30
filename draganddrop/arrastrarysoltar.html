@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrastrar y soltar</title>
+    <style>
+        img{
+            width: 90px;
+        }
+        #div1,#div2{
+            float: left;
+            border: 1px solid black;
+            height: 370px;
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Arrastrar y soltar</h2>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img src="img/logo.png" draggable="true"
+        ondragstart="drag(event)" id="logo1">
+        <img src="img/logo.png" draggable="true"
+        ondragstart="drag(event)" id="logo2">
+        <img src="img/logo.png" draggable="true"
+        ondragstart="drag(event)" id="logo3">
+        <img src="img/logo.png" draggable="true"
+        ondragstart="drag(event)" id="logo4">
+    </div>
+    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    </div>
+    <!-- event.preventDefault(); -->
+    <script>
+    function drag(evt) {
+        //Copio el ID de laimagen al evento con el alias text
+        evt.dataTransfer.setData("text",evt.target.id);
+    }
+
+    function allowDrop(evt) {
+        //Desactivar el evento que rechaza el objeto
+        evt.preventDefault();
+    }
+    
+    function drop(evt) {
+        evt.preventDefault();
+        var data = evt.dataTransfer.getData("text");
+        evt.target.appendChild(document.getElementById(data));
+    }
+    </script>
+</body>
+</html>
