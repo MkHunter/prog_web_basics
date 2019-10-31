@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notificaciones</title>
+</head>
+<body>
+    <button onClick="enviarNotificaciones()">Notificaciones</button>
+    <script>
+        // Abrir el servicio web de mac que utilzia python:
+        // python -m SimpleHTTPServer
+        // http://localhost/notify/notificaciones.html
+        // http://127.0.0.1:8000/notify/notificaciones.html
+        function enviarNotificaciones() {
+            //Comprobar si el navegador soporta notificaciones
+            if (!("Notificacion") in window) {
+                alert("No soporta notificaciones");
+            } else if(Notification.permission === "granted"){
+                //Comprobamos si ya autorizamos
+                //Lanzamos las notificaciones
+                const notificacion = new Notification("Segunda notificacion");
+            }else if (Notification.permission === "default" ||  Notification.permission === "denied") {
+                //Solicitamos permiso al usuario para enviar notificaciones
+                Notification.requestPermission(function (permission) {
+                    //Si el usuario concede el permiso lanzamos la notificacion
+                    if (permission === "granted") {
+                        const notificacion = new Notification("Bienvenido :)");                        
+                    }                    
+                }); //Funcion callback 
+            }
+        }
+    </script>
+</body>
+</html>

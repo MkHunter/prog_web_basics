@@ -1,9 +1,13 @@
 
 
-function drag(event) {
+function drag(evt) {
     
 }
 
-function allowDrop(event) {
+function allowDrop(evt) {
+    
+}
+
+function drop(evt) {
     
 }
