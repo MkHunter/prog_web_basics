@@ -1,0 +1,114 @@
+article{
+    border-radius: 5px;
+    height: 50px;
+    width: 150px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+body{
+    max-width: 600px;
+    max-height: 1500px;
+}
+
+body section{
+    display: inline-block;
+    margin-left: 25px;
+
+}
+
+#uno{
+    /*Sin gradientes*/
+    background: red;
+    background: -o-linear-gradient(rgba(255,0,0,1), rgba(255,255,0,1)); /*Opera*/
+    background: -webkit-linear-gradient(rgba(255,0,0,1), rgba(255,255,0,1)); /*Safari*/
+    background: -moz-linear-gradient(rgba(255,0,0,1), rgba(255,255,0,1)); /*Firefox*/
+    background: -ms-linear-gradient(rgba(255,0,0,1), rgba(255,255,0,1)); /*Microsoft Edge*/
+    background: linear-gradient(rgba(255,0,0,1), rgba(255,255,0,1)); /*Todos*/
+}
+
+#dos{
+    background: linear-gradient(to top, red, yellow);
+}
+
+#tres{
+    background: linear-gradient(to left, red, yellow);
+}
+
+#cuatro{
+    background: linear-gradient(to right, red, yellow);
+}
+
+#cinco{
+    background: linear-gradient(to bottom right, red, yellow);
+}
+
+#seis{
+    background: linear-gradient(to bottom left, red, yellow);
+}
+
+#siete{
+    background: linear-gradient(0deg, red, yellow);
+}
+
+#ocho{
+    background: linear-gradient(45deg, red, yellow);
+}
+
+#nueve{
+    background: linear-gradient(red, yellow, blue);
+}
+
+#diez{
+    background: linear-gradient(to top, red, yellow, blue);
+}
+
+#once{
+    background: linear-gradient(to left, red, yellow, blue);
+}
+#doce{
+    background: linear-gradient(to right, red, yellow, blue);
+}
+#trece{
+    background: linear-gradient(to bottom right, red, yellow, blue);
+}
+#catorce{
+    background: linear-gradient(to bottom left, red, yellow, blue);
+}
+#quince{
+    background: linear-gradient(0deg, red, yellow, blue);
+}
+#diesi{
+    background: linear-gradient(45deg, red, yellow, blue);
+}
+
+#diesi7{
+    background: repeating-linear-gradient(45deg, red, yellow, blue 2%);
+}
+#diesi8{
+    background: repeating-linear-gradient(45deg, red, yellow, blue 20%);
+}
+#diesi9{
+    background: repeating-linear-gradient(to left, red, yellow, blue 10%);
+}
+#veinte{
+    background: repeating-linear-gradient(45deg, black, white , black);
+}
+#veinti1{
+    background: repeating-linear-gradient(45deg, black 5%, white , black);
+}
+#veinti2{
+    background: repeating-linear-gradient(45deg,  black, white 5%, black);
+}
+#veinti3{
+    background: repeating-linear-gradient(45deg,  black 20%, white , black 50%);
+}
+#veinti4{
+    background: repeating-linear-gradient(to bottom right,  black, white, black 5%);
+}
+
+.texto{
+    position: relative;
+    top: 15px;
+
+}
