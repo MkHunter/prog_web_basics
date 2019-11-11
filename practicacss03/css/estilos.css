@@ -1,0 +1,151 @@
+body{
+    font-size: 14px; /*1em*/
+    margin: 0px auto; /*centrado pantalla*/ 
+    max-width: 650px; /*cliente*/
+    min-width: 1078px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body header{
+    display: inline-block;
+    background-color: rgb(240,240,240);
+    vertical-align: center;
+    max-width: 1078px; /*cliente*/
+    min-width: 1078px;
+    height: 58px;
+}
+
+#section01{
+    border-bottom: .3px solid #797979;
+}
+
+body header input{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-top: 25px;
+    margin-left: 70px;
+    margin-top: 5px;
+    font-size: .90em;
+}
+
+body header img{
+    display: inline-block;
+    width: 79%;
+    height: 79%;
+    float: right;
+    margin-right: 17px;
+}
+
+#section01{
+    background-color: rgb(43,43,43);
+}
+
+#section01 article{
+    display: inline-block;
+    width: 18.7%;
+    height: 270px;
+    vertical-align: top;
+    margin: 20px -4px 20px 0px;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+#sec01art01{
+    background-color: #2B2B2B;
+    color: rgb(111,111,111);
+}
+
+#sec01art01 ul{
+    margin-top: 45px;
+}
+
+#sec01art01 ul li{
+    list-style: none;
+    margin-top: 5px;
+}
+
+#sec01art01 img{
+    width: 65%;
+    margin-left: 10px;
+    margin-top: -15px;
+}
+
+#sec01art02{
+    background-color: #B4D052;
+}
+#sec01art03{
+    background-color: #545454;
+}
+#sec01art04{
+    background-color: #D42D3F;
+}
+#sec01art05{
+    background-color: #E4E4E4;
+}
+
+footer{
+    background-color: #2B2B2B;
+}
+
+.imgsize1{
+    width: 80%;
+    height: 13%;
+    margin-left: 65px;
+}
+
+footer article{
+    display: inline-block;
+    width: 30%;
+    height: 240px;
+    vertical-align: top;
+    margin: 20px 0px 20px 30px;
+    color: rgb(137,137,137);
+}
+
+footer article hr{
+    border: .8px dashed gray;
+}
+
+footer article ul li{
+    margin-top: 5px;
+    list-style: none;
+}
+
+#articleFinalFooter ul{
+    display: inline-block;
+}
+
+.colorblanco{
+    color: white;
+}
+
+.colorgrisbrillante{
+    color: #9E9E9E;
+}
+
+.colorgris{
+    color: #797979;
+}
+
+.colorazul{
+    color: teal;
+}
+
+.tamañogrande{
+    font-size: 1.7em;
+}
+
+.nito{
+    font-weight: bold;
+}
+
+.alderecha{
+    float: right;
+    margin-right: 10px;
+}
+
+.muevederecha{
+    margin-left: 50px;
+    display: inline-block;
+}
