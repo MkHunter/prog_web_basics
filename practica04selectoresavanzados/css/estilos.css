@@ -1,0 +1,86 @@
+img[alt]{
+    border: 5px solid blue;
+}
+
+img[src="img/logotec.png"]{
+    width: 400px;
+}
+/* ^*$ abc
+  Se utiliza el acento circunflejo(^) para
+  buscar una subcadena de inicio.           */
+img[src^="img"]{
+    width: 400px;
+}
+/*Se utiliza el símbolo de peso($) para
+  buscar una subcadena final.       */
+img[src$="png"]{
+    width: 150px;
+}
+/*Se utiliza el símbolo de asterísco(*) para
+  buscar una subcadena contenida en cualquier parte.*/
+img[src*="mg/"]{
+    width: 100px;/*1000px;*/
+}
+/*Equivalente a:
+  .resaltado
+  .ingles
+  .archivo
+*/
+article[src~="resaltado"]{
+    border: 1px dashed blue;
+}
+article[src~="ingles"]{
+    border: 1px dashed red;
+}
+article[src~="archivo"]{
+    border: 1px dashed green;
+}
+/*
+    Para reconocer clases separadas por guines:
+    ej. class="nito-ingles-letragrande"
+*/
+article[class|="ingles"]{
+    text-align: center;
+}
+/*Hijos directos de p*/
+div > p{
+    color: blue;
+}
+/*Toma el primer elemento p seguido de h2*/
+h2 + p{
+    color: gray;
+}
+/*Toma todos los elementos p seguidos de h2*/
+h2 ~ p{
+    color: green;
+}
+/*Aplicar mismo estilo a varios id's*/
+#resumen,#experimento,#pruebas,#resultados,#conclusiones,#referencias{
+    color: orange;
+}
+/* Tomar todos los elementos de una sección
+   a excepción de uno                       */
+section:not(#referencias){
+    color: blue;
+}
+
+li:nth-child(odd){
+    color: green;
+}
+
+li:nth-child(even){
+    color: orange;
+}
+
+li:nth-child(5){ /*Obtener el 5to elemento de la lista*/
+    color: red;
+}
+li:nth-last-child(1){ /*Obtener el 5to elemento de la lista*/
+    color: purple;
+}
+
+/* Modificar primera linea */
+p:first-line{
+    color: red;
+    font-weight: bold;
+}
