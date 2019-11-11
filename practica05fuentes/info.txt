@@ -1,0 +1,22 @@
+Fuentes:
+    >Sistema operativo:
+        *Comic, arial, etc. (Microsoft)
+        *Son privadas, propiedad de MS.
+
+    >Gratuitas:
+        *Google fonts
+        *Serif (No propias para la web)
+        *Sans Serif (Recomendadas, no cansan la vista)
+        *Display
+        *Handwriting
+        *Monospace
+
+¿Cómo utilizar las fuentes?
+    1. Vincular: <link ...>
+    2. CSS: font-family: 'Rubik', sans-serif;
+    3. Personalizar (Tiempo de carga rápido es recomendado)
+
+    0. Obtener extesión de Google fonts en Visual Studio Code.
+        Ctrl + Shift + P
+        Type: "Google fonts"
+        Search for fonts :)

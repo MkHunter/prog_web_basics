@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fuentes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        #txtTextoReferenciado{
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+        @font-face {
+            font-family: 'Maven Pro', sans-serif;
+            src: url("fonts/MavenPro-Regular.ttf")
+        }
+        #txtTextoDescargado{
+            font-family: 'Maven Pro', sans-serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <span id="txtTextoReferenciado">
+        Fuente Roboto de Google (Referenciado)
+    </span>
+    <br>
+    <span id="txtTextoDescargado">
+        Fuente Maven Pro de Google (Descargado)
+    </span>
+</body>
+</html>
