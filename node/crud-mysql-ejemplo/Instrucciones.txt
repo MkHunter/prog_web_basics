@@ -1,2 +1,4 @@
 npm install express ejs mysql express-myconnection
 npm install nodemon --save-dev
+
+npm start

@@ -14,7 +14,19 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname,'vistas'));
 
 //Middleware
-//  app.use()
+app.use(myConnection(mysql, { //Conexión
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    port: 3306, //Puerto por default de mysql
+    database: 'crudnodejsmysql'
+}, 'single')) //Conexión simple: Host
+
+//Permite que los datos que se envíen por un formulario se auditen de manera correcta
+// Bandera extended: false. Codificadar correctamente los datos a través de la URL
+// Para que se manden únicamente datos planos: nombres, letras o números. SIN IMAGENES
+// ******Importante ponerlo al enviar datos hacia el servidor desde un formulario******
+app.use(express.urlencoded({extended: false}));
 
 //Usamos las rutas
 app.use('/', indiceRutas);
